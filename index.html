@@ -25,6 +25,40 @@ html,body{margin:0;height:100%;overflow:hidden;background:#0b0d12;color:#fff;fon
 button{font:inherit;font-weight:800;background:var(--red);color:#fff;border:0;padding:14px 34px;border-radius:4px;cursor:pointer;letter-spacing:.1em}
 #df button{background:#333;padding:10px 18px;margin:0 3px}#df button.on{background:var(--red)}[hidden]{display:none!important}#vcb{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));z-index:60;background:var(--glass);border:1px solid #666;padding:9px 16px;font-size:12px;letter-spacing:.06em}#vcb.live{border-color:#2ecc40;color:#2ecc40}#mps{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;max-width:520px}#mps button{background:#333;padding:8px 12px;font-size:11px}#mps button.on{background:var(--red)}#mps button:disabled{opacity:.4}#mapn{font-size:13px}html,body{touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}input{-webkit-user-select:text;user-select:text}#rot{display:none;position:fixed;inset:0;z-index:50;background:#0b0d12;align-items:center;justify-content:center;text-align:center;padding:30px;font-size:18px}@media(orientation:portrait){body.touch #rot{display:flex}}#tc{display:none}body.touch #tc{display:block}.tb{position:fixed;bottom:max(18px,env(safe-area-inset-bottom));width:80px;height:80px;border-radius:50%;background:rgba(10,12,18,.55);border:2px solid rgba(255,255,255,.35);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;touch-action:none;backdrop-filter:blur(4px)}.tb.on{background:rgba(225,6,0,.75)}#tL{left:max(16px,env(safe-area-inset-left))}#tR{left:calc(max(16px,env(safe-area-inset-left)) + 96px)}#tG{right:max(16px,env(safe-area-inset-right));width:92px;height:112px;border-radius:30px}#tB{right:calc(max(16px,env(safe-area-inset-right)) + 108px)}#tD,#tC,#tX{width:56px;height:40px;border-radius:12px;font-size:11px;bottom:calc(max(18px,env(safe-area-inset-bottom)) + 124px)}#tD{right:max(16px,env(safe-area-inset-right))}#tC{right:calc(max(16px,env(safe-area-inset-right)) + 66px)}#tX{right:calc(max(16px,env(safe-area-inset-right)) + 132px)}body.touch #br{right:auto;left:50%;transform:translateX(-50%);bottom:auto;top:8px;min-width:0;padding:4px 12px;text-align:center}body.touch #spd{font-size:28px}body.touch #gear{font-size:20px}body.touch #leds i{width:8px}body.touch #mm{width:92px;height:92px;left:auto;right:8px;bottom:auto;top:8px}body.touch #lb{top:108px;right:8px;font-size:10px;min-width:100px;padding:4px 8px}body.touch #tl{font-size:11px;padding:5px 9px;top:8px;left:8px;line-height:1.5}body.touch #pos{font-size:18px}body.touch #msg{gap:8px;font-size:12px}body.touch #msg h1{font-size:26px}body.touch #lights{top:5%;padding:8px 12px}body.touch #lights i{width:22px;height:22px}input{font:inherit;padding:12px 14px;border-radius:4px;border:1px solid #444;background:#12151c;color:#fff;text-align:center;width:min(320px,78vw);box-sizing:border-box}#lnk{width:min(460px,86vw);font-size:12px}#step1,#step2{display:flex;flex-direction:column;align-items:center;gap:12px}#pls{font-size:14px;min-height:20px;line-height:1.7}#net{font-size:12px;color:#9aa3b2;max-width:420px}#lb{top:14px;right:14px;font-size:12px;line-height:1.7;min-width:150px;display:none}#drs{display:inline-block;padding:1px 8px;border:1px solid #555;color:#555;font-size:13px;border-radius:3px}
 #drs.on{color:#0f6;border-color:#0f6}
+:root{--m:clamp(6px,1.6vmin,16px);--tb:clamp(54px,15vmin,92px);--ms:clamp(84px,17vmin,170px);--sl:env(safe-area-inset-left,0px);--sr:env(safe-area-inset-right,0px);--st:env(safe-area-inset-top,0px);--sb:env(safe-area-inset-bottom,0px)}
+:root body #tl{top:calc(var(--m) + var(--st));left:calc(var(--m) + var(--sl));font-size:clamp(10px,1.4vmin + 3px,14px);padding:clamp(4px,1vmin,9px) clamp(8px,1.6vmin,14px);line-height:1.55}
+:root body #pos{font-size:clamp(15px,3.2vmin + 2px,28px)}
+:root body #br{right:calc(var(--m) + var(--sr));bottom:calc(var(--m) + var(--sb));left:auto;top:auto;transform:none;min-width:clamp(140px,22vmin,230px);padding:clamp(4px,1vmin,9px) clamp(8px,1.6vmin,14px)}
+:root body #spd{font-size:clamp(24px,6.4vmin,56px)}
+:root body #gear{font-size:clamp(16px,3.4vmin,30px)}
+:root body #leds i{width:clamp(6px,1.3vmin,12px);height:clamp(5px,.9vmin,8px)}
+:root body #mm{width:var(--ms);height:var(--ms);left:calc(var(--m) + var(--sl));bottom:calc(var(--m) + var(--sb));right:auto;top:auto}
+:root body #lb{top:calc(var(--m) + var(--st));right:calc(var(--m) + var(--sr));font-size:clamp(9px,1.2vmin + 3px,13px);min-width:clamp(100px,17vmin,160px);padding:clamp(4px,.9vmin,8px) clamp(7px,1.4vmin,12px)}
+:root body #lights{top:clamp(6px,10vh,14%);padding:clamp(6px,1.6vmin,14px) clamp(10px,2.2vmin,20px);gap:clamp(6px,1.6vmin,14px)}
+:root body #lights i{width:clamp(18px,4.4vmin,34px);height:clamp(18px,4.4vmin,34px)}
+:root body #fl{font-size:clamp(24px,7vmin,64px);top:clamp(70px,22vh,26%)}
+:root body #vcb{font-size:clamp(10px,1.4vmin + 3px,13px);padding:clamp(6px,1.3vmin,10px) clamp(10px,2vmin,16px);bottom:calc(var(--m) + var(--sb))}
+:root body #msg{overflow-y:auto;justify-content:flex-start;gap:clamp(8px,2vmin,16px);font-size:clamp(11px,1.5vmin + 4px,15px);padding:clamp(10px,3vmin,24px)}
+:root body #msg::before,:root body #msg::after{content:"";flex:1 0 4px}
+:root body #msg h1{font-size:clamp(24px,7vmin,64px)}
+body button{font-size:clamp(11px,1.6vmin + 4px,15px);padding:clamp(8px,1.8vmin,14px) clamp(14px,3.2vmin,34px)}
+body #mps button{font-size:clamp(9px,1.3vmin + 3px,12px);padding:clamp(6px,1.2vmin,8px) clamp(8px,1.6vmin,12px)}
+body input{font-size:clamp(12px,1.7vmin + 4px,15px);padding:clamp(8px,1.6vmin,12px) 14px;width:min(320px,80vw)}
+body #lnk{width:min(460px,88vw);font-size:clamp(10px,1.3vmin + 3px,12px)}
+:root body .tb{width:var(--tb);height:var(--tb);font-size:clamp(10px,2.2vmin + 2px,14px);bottom:calc(var(--m) + var(--sb))}
+:root body #tL{left:calc(var(--m) + var(--sl))}
+:root body #tR{left:calc(var(--m) + var(--sl) + var(--tb) + 12px)}
+:root body #tG{right:calc(var(--m) + var(--sr));width:calc(var(--tb)*1.12);height:calc(var(--tb)*1.4)}
+:root body #tB{right:calc(var(--m) + var(--sr) + var(--tb)*1.12 + 14px)}
+:root body #tD,:root body #tC,:root body #tX{width:calc(var(--tb)*.68);height:calc(var(--tb)*.46);font-size:clamp(9px,1.7vmin + 2px,12px);bottom:calc(var(--m)*2 + var(--sb) + var(--tb)*1.4)}
+:root body #tD{right:calc(var(--m) + var(--sr))}
+:root body #tC{right:calc(var(--m) + var(--sr) + var(--tb)*.68 + 8px)}
+:root body #tX{right:calc(var(--m) + var(--sr) + (var(--tb)*.68 + 8px)*2)}
+:root body.cp #br{left:50%;right:auto;transform:translateX(-50%);bottom:auto;top:calc(var(--m) + var(--st));min-width:0;text-align:center}
+:root body.cp #spd{font-size:clamp(20px,5.6vmin,32px)}
+:root body.cp #gear{font-size:clamp(14px,3vmin,22px)}
+:root body.cp #mm{left:auto;bottom:auto;right:calc(var(--m) + var(--sr));top:calc(var(--m) + var(--st));width:calc(var(--ms)*.62);height:calc(var(--ms)*.62)}
+:root body.cp #lb{top:calc(var(--m) + var(--st) + var(--ms)*.62 + 8px);font-size:clamp(9px,1.1vmin + 3px,11px)}
 </style></head><body>
 <canvas id="c"></canvas>
 <div class="p" id="tl"><div id="pos">P– / 10</div><div id="lap">LAP 0 / 3</div><div id="tm">0:00.000</div><div>LAST <b id="last">–</b> &nbsp; BEST <b id="best">–</b></div></div>
@@ -43,8 +77,8 @@ const TR=[null,[[0,-20],[0,300],[0,700],[0,1050],[-20,1150],[30,1230],[120,1290]
 TH=[{g:'#43762d',f:0xbcd0e2,s:'#2a66ad',h:'#9cc1e4',z:'#d3e2ee'},{g:'#6c8a3a',f:0xe2d9bb,s:'#3a76b8',h:'#e8dcae',z:'#eadfbd'},{g:'#55737a',f:0xa9bccd,s:'#1d4e86',h:'#a8c0d8',z:'#b7c9da'},{g:'#b49b5e',f:0xe8caa0,s:'#c2672a',h:'#f2c88f',z:'#f0d3ab'}],
 trk=(()=>{const m=location.hash.match(/^#(?:map(\d)|race-(\d))/);let t=m?+(m[1]??m[2]):-1;if(t<0){try{t=+sessionStorage.getItem('apexMap')||0}catch(e){t=0}}return clamp(t|0,0,TR.length-1)})();
 S.fog=new THREE.Fog(TH[trk].f,300,1700);
-function rs(){R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
-addEventListener('resize',rs);rs();
+function rs(){document.body.classList.toggle('cp',document.body.classList.contains('touch')||innerWidth<820||innerHeight<520);R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
+addEventListener('resize',rs);addEventListener('orientationchange',()=>setTimeout(rs,250));if(window.visualViewport)visualViewport.addEventListener('resize',rs);rs();
 function tex(w,h,fn,rx=1,ry=1){const g=document.createElement('canvas');g.width=w;g.height=h;fn(g.getContext('2d'),w,h);const t=new THREE.CanvasTexture(g);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(rx,ry);t.anisotropy=8;t.encoding=THREE.sRGBEncoding;return t}
 function speck(x,w,h,base,n,a){x.fillStyle=base;x.fillRect(0,0,w,h);for(let i=0;i<n;i++){x.fillStyle=Math.random()<.5?`rgba(0,0,0,${a})`:`rgba(255,255,255,${a})`;x.fillRect(Math.random()*w,Math.random()*h,2,2)}}
 // sky + light
@@ -257,7 +291,7 @@ if(st==='ready'){const t=now/4000;cam.position.set(pl.x+Math.cos(t)*9,2.6,pl.z+M
 else{const cm=[[-8.5,3.3,12],[-5.6,1.9,8],[.2,1.25,12]][camMode],k=camMode===2?1:1-Math.exp(-dt*9);
 cam.position.x+=(pl.x+fx*cm[0]-cam.position.x)*k;cam.position.z+=(pl.z+fz*cm[0]-cam.position.z)*k;cam.position.y+=(cm[1]-cam.position.y)*k+(Math.random()-.5)*pl.vf*.0004;
 cam.lookAt(pl.x+fx*cm[2],.7,pl.z+fz*cm[2])}
-const fv=62+pl.vf*.2;if(Math.abs(cam.fov-fv)>.05){cam.fov+=(fv-cam.fov)*.1;cam.updateProjectionMatrix()}
+const fv=(62+pl.vf*.2)*(cam.aspect<1.3?Math.min(1.5,1.3/cam.aspect):1);if(Math.abs(cam.fov-fv)>.05){cam.fov+=(fv-cam.fov)*.1;cam.updateProjectionMatrix()}
 sky.position.copy(cam.position);sun.position.set(pl.x+200,300,pl.z+120);sun.target.position.set(pl.x,0,pl.z);
 R.render(S,cam);
 // HUD + sound
